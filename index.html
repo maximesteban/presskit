@@ -1,326 +1,367 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>LXBE — Afrohouse Presskit</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>LXBE Presskit | DJ Afro House</title>
     <meta
       name="description"
-      content="Presskit for LXBE, Barcelona-born Afrohouse selector blending house, funky house, and nu disco to create emotional, high-energy dancefloor moments."
-    >
-    <meta property="og:title" content="LXBE — Afrohouse Presskit">
+      content="Presskit oficial de LXBE, DJ de Barcelona. Afro House, House, Funky House y Nu Disco para clubs, festivales y eventos privados."
+    />
+    <meta property="og:title" content="LXBE Presskit | DJ Afro House" />
     <meta
       property="og:description"
-      content="Experience LXBE: Barcelona-based Afrohouse artist delivering uplifting house blends and nu disco energy worldwide. Explore highlights and book the vibe."
-    >
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://lxbe.co">
-    <meta property="og:image" content="https://lxbe.co/presskit-cover.jpg">
-    <meta name="theme-color" content="#050506">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      content="Bio, sonido, mixes, fechas y contacto para bookings de LXBE."
+    />
+    <meta property="og:type" content="website" />
+    <meta name="theme-color" content="#f5f1e8" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;600;700&family=Manrope:wght@300;400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;700&display=swap"
       rel="stylesheet"
-    >
-    <link rel="stylesheet" href="styles.css">
+    />
+    <link rel="stylesheet" href="styles.css" />
   </head>
+
   <body>
-    <div class="noise-overlay" aria-hidden="true"></div>
-    <header class="hero" id="top">
-      <nav class="nav">
-        <a class="nav__brand" href="#top">LXBE</a>
-        <button class="nav__toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle navigation menu">
-          <span class="nav__toggle-line"></span>
-          <span class="nav__toggle-line"></span>
+    <div class="bg-shape bg-shape--a" aria-hidden="true"></div>
+    <div class="bg-shape bg-shape--b" aria-hidden="true"></div>
+
+    <header class="site-header" id="top">
+      <nav class="nav container" data-i18n-attr="aria-label:nav_aria">
+        <a class="brand" href="#top">LXBE</a>
+
+        <button
+          class="nav-toggle"
+          aria-expanded="false"
+          aria-controls="nav-menu"
+          data-i18n-attr="aria-label:menu_toggle"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
         </button>
-        <div class="nav__links" id="nav-menu">
-          <a href="#about">Biography</a>
-          <a href="#sound">Sound</a>
-          <a href="#mixes">Featured Mixes</a>
-          <a href="#events">Events</a>
-          <a href="#gallery">Visuals</a>
-          <a href="#contact">Booking</a>
+
+        <div class="nav-right">
+          <div class="nav-menu" id="nav-menu">
+            <a href="#about" data-i18n="nav_about">Bio + Sound</a>
+            <a href="#mixes" data-i18n="nav_mixes">Mixes</a>
+            <a href="#instagram" data-i18n="nav_instagram">Instagram</a>
+            <a href="#contacto" data-i18n="nav_contact">Contacto</a>
+          </div>
+
+          <div class="lang-switch" aria-label="Language switcher">
+            <button class="lang-btn" type="button" data-lang="es" aria-pressed="true">ES</button>
+            <button class="lang-btn" type="button" data-lang="en" aria-pressed="false">EN</button>
+          </div>
         </div>
       </nav>
-      <div class="hero__content reveal">
-        <span class="hero__kicker">Afro House · House · Nu Disco</span>
-        <h1>LXBE</h1>
-        <p>
-          Barcelona-born LXBE — friends know them as Alex or ALEXBE — lives and breathes the rhythm
-          of the city. Sets blend Afrohouse, house, funky house, and nu disco into glowing after-hours
-          ceremonies where every transition is designed for emotional connection and pure release.
-        </p>
-        <p class="hero__note">
-          Stay tuned for fresh mixes via
-          <a href="https://linktr.ee/alexbemusic?utm_source=linktree_profile_share&amp;ltsid=fe0090f7-215e-4d7a-974f-dc3d6d646f4e" target="_blank" rel="noreferrer">
-            linktr.ee/alexbemusic
-          </a>.
-        </p>
-        <div class="hero__actions">
-          <a class="button button--primary" href="#mixes">Listen Now</a>
-          <a class="button button--ghost" href="#contact">Book LXBE</a>
+
+      <section class="hero container reveal">
+        <div class="hero-copy">
+          <p class="kicker" data-i18n="hero_kicker">Afro House · House · Funky House · Nu Disco</p>
+          <h1 data-i18n="hero_title">PRESSKIT LXBE</h1>
+          <p data-i18n="hero_text">
+            DJ de Barcelona con sets enérgicos y emocionales. LXBE mezcla percusión afro,
+            grooves house y momentos vocales para crear pistas de baile con identidad.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#mixes" data-i18n="hero_cta_listen">Escuchar mixes</a>
+            <a class="btn btn-ghost" href="#contacto" data-i18n="hero_cta_book">Solicitar booking</a>
+            <button class="btn btn-ghost" type="button" data-action="download-onesheet" data-i18n="hero_cta_download">
+              Descargar one-sheet
+            </button>
+          </div>
+         
         </div>
-        <div class="hero__stats">
-          <div>
-            <span class="hero__stat-number">140+</span>
-            <span class="hero__stat-label">Shows Played</span>
-          </div>
-          <div>
-            <span class="hero__stat-number">18</span>
-            <span class="hero__stat-label">Cities</span>
-          </div>
-          <div>
-            <span class="hero__stat-number">2</span>
-            <span class="hero__stat-label">Residencies</span>
-          </div>
-        </div>
-      </div>
-      <div class="hero__visual reveal">
-        <div class="hero__orb hero__orb--one"></div>
-        <div class="hero__orb hero__orb--two"></div>
-        <div
-          class="hero__portrait"
-          role="img"
-          aria-label="Abstract portrait silhouette of LXBE surrounded by gold light trails"
-        ></div>
-      </div>
+
+        <div class="hero-card" role="img" data-i18n-attr="aria-label:hero_visual_aria"></div>
+      </section>
     </header>
 
     <main>
-      <section class="section section--narrow reveal" id="about">
-        <div class="section__heading">
-          <span class="section__kicker">Biography</span>
-          <h2>The Story</h2>
+      <section class="section container reveal" id="about">
+        <div class="section-head">
+          <p class="kicker" data-i18n="about_kicker">Biography + Sound DNA</p>
+          <h2 data-i18n="about_title">Historia, identidad y energía</h2>
         </div>
-        <div class="about">
-          <p>
-            I’m Alex, known on the decks as LXBE (but the fam still calls me ALEXBE). Born and raised
-            in Barcelona, I grew up tuned into the hum of my city — every street performer, vinyl shop,
-            and underground party fed an obsession with rhythm that never switched off.
-          </p>
-          <p>
-            Music isn’t a hobby; it’s how I move through life. From childhood I’ve heard stories in
-            every sound around me, and today I translate that connection into DJ sets that invite people
-            to feel deeply. Afrohouse and house anchor my selections, while funky house and nu disco slip
-            in to keep the energy magnetic, soulful, and full of warmth.
-          </p>
-          <p>
-            What matters most is the crowd — watching them let go for a few hours, breathe with every
-            drop, and walk away with a memory tied to the music. That’s my mission every night: craft
-            unforgettable experiences where emotions and rhythm move together.
-          </p>
-        </div>
-      </section>
-
-      <section class="section section--split reveal" id="sound">
-        <div class="section__heading">
-          <span class="section__kicker">Sound DNA</span>
-          <h2>Signature Frequencies</h2>
-        </div>
-        <div class="sound">
-          <div class="sound__pillars">
-            <article>
-              <h3>Genres</h3>
-              <p>Afro house, house, funky house, and nu disco woven into one journey.</p>
-            </article>
-            <article>
-              <h3>Vibe</h3>
-              <p>Good energy, positive grooves, and sets engineered for emotional connection.</p>
-            </article>
-            <article>
-              <h3>Inspiration</h3>
-              <p>Designing unforgettable nights where music and feelings flow in perfect harmony.</p>
-            </article>
+        <div class="about-lab">
+          <div class="about-lab__ticker" aria-hidden="true">
+            <div class="about-lab__ticker-track">
+              <span data-i18n="about_tag_1">Afro House</span>
+              <span data-i18n="about_tag_2">Club Energy</span>
+              <span data-i18n="about_tag_3">Emotional Journey</span>
+              <span data-i18n="about_tag_1">Afro House</span>
+              <span data-i18n="about_tag_2">Club Energy</span>
+              <span data-i18n="about_tag_3">Emotional Journey</span>
+            </div>
           </div>
-          <div class="sound__highlight">
-            <h3>Set Philosophy</h3>
-            <p>
-              Every mix is built to feel personal — a space where dancers can let go, stay present, and
-              celebrate together. Expect uplifting melodies, driving percussion, and grooves that linger
-              long after the lights come up.
-            </p>
-            <a class="button button--text" href="https://tr.ee/GyaMn-G9u0" target="_blank" rel="noreferrer">
-              Explore LXBE Essentials
-            </a>
+
+          <div class="about-lab__grid">
+            <article class="about-lab__story">
+              <p data-i18n="bio_p1">
+                Alex, conocido como LXBE, nace y crece en Barcelona rodeado de cultura club y
+                ritmos urbanos. Desde muy joven conecta con la selección musical como lenguaje
+                emocional.
+              </p>
+              <p data-i18n="bio_p2">
+                Su propuesta combina Afro House, House, Funky House y Nu Disco en una narrativa
+                de energía ascendente: arranque elegante, desarrollo hipnótico y cierre explosivo.
+              </p>
+              <p data-i18n="bio_p3">
+                El objetivo de cada set es claro: generar conexión real entre música y público,
+                creando recuerdos fuertes en cada noche.
+              </p>
+            </article>
+
+            <article class="about-lab__dna">
+              <div class="about-lab__ring" aria-hidden="true"></div>
+              <div class="about-lab__pulse" aria-hidden="true"></div>
+              <ul class="about-lab__points">
+                <li>
+                  <h3 data-i18n="sound_card1_title">Géneros</h3>
+                  <p data-i18n="sound_card1_text">Afro House, House, Funky House y Nu Disco curados para pista.</p>
+                </li>
+                <li>
+                  <h3 data-i18n="sound_card2_title">Vibe</h3>
+                  <p data-i18n="sound_card2_text">Sets positivos, bailables y con transiciones limpias orientadas al público.</p>
+                </li>
+                <li>
+                  <h3 data-i18n="sound_card3_title">Diferencial</h3>
+                  <p data-i18n="sound_card3_text">Selección emocional con estética contemporánea para clubs y eventos premium.</p>
+                </li>
+              </ul>
+            </article>
           </div>
         </div>
       </section>
 
-      <section class="section reveal" id="mixes">
-        <div class="section__heading">
-          <span class="section__kicker">Featured Mixes</span>
-          <h2>Selected Sessions</h2>
+      <section class="section container reveal" id="mixes">
+        <div class="section-head">
+          <p class="kicker" data-i18n="mixes_kicker">Featured</p>
+          <h2 data-i18n="mixes_title">Mixes destacados</h2>
         </div>
-        <div class="mixes">
-          <article class="mix-card reveal">
-            <div class="mix-card__cover mix-card__cover--amber" aria-hidden="true"></div>
-            <div class="mix-card__content">
-              <h3>Barcelona Frequency</h3>
-              <p>
-                A SoundCloud session that captures the sun-soaked energy of Barcelona rooftops layered
-                with Afrohouse percussion and nu disco shimmer.
-              </p>
-              <div class="mix-card__meta">
-                <span>SoundCloud</span>
-                <span>Afro House</span>
-              </div>
-              <div class="mix-card__links">
-                <a href="https://tr.ee/63Ct2nyrCb" target="_blank" rel="noreferrer">Listen</a>
-              </div>
-            </div>
-          </article>
-          <article class="mix-card reveal">
-            <div class="mix-card__cover mix-card__cover--onyx" aria-hidden="true"></div>
-            <div class="mix-card__content">
-              <h3>House of Emotions</h3>
-              <p>
-                Mixcloud-exclusive ride through feel-good house, funky basslines, and vocal moments that
-                bring LXBE’s crowd-first philosophy to life.
-              </p>
-              <div class="mix-card__meta">
-                <span>Mixcloud</span>
-                <span>Funky House</span>
-              </div>
-              <div class="mix-card__links">
-                <a href="https://tr.ee/fVaD_KxRoU" target="_blank" rel="noreferrer">Listen</a>
-              </div>
-            </div>
-          </article>
-          <article class="mix-card reveal">
-            <div class="mix-card__cover mix-card__cover--scarlet" aria-hidden="true"></div>
-            <div class="mix-card__content">
-              <h3>Goldline Live Cut</h3>
-              <p>
-                A late-night extract from LXBE’s private archive — deep grooves, crowd reactions, and
-                tension-building blends recorded during a signature club set.
-              </p>
-              <div class="mix-card__meta">
-                <span>Live</span>
-                <span>Club Set</span>
-              </div>
-              <div class="mix-card__links">
-                <a href="https://tr.ee/GyaMn-G9u0" target="_blank" rel="noreferrer">Listen</a>
-              </div>
-            </div>
-          </article>
+        <div class="panel mix-list-panel">
+          <p class="mix-list-label" data-i18n="mix_list_tracks">Tracks</p>
+          <iframe
+            class="mix-list-embed"
+            title="SoundCloud tracks list from alexbemusic profile"
+            scrolling="no"
+            frameborder="no"
+            allow="autoplay"
+            data-consent-src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/alexbemusic/tracks&color=%231f3a8a&auto_play=false&hide_related=false&show_comments=false&show_user=true&show_reposts=false&show_teaser=true&visual=false"
+          ></iframe>
+          <iframe
+            class="mix-list-embed"
+            title="SoundCloud set from alexbemusic profile"
+            scrolling="no"
+            frameborder="no"
+            allow="autoplay"
+            data-consent-src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/alexbemusic/sets/alexbe&color=%231f3a8a&auto_play=false&hide_related=false&show_comments=false&show_user=true&show_reposts=false&show_teaser=true&visual=false"
+          ></iframe>
+          <a href="https://soundcloud.com/alexbemusic" target="_blank" rel="noreferrer" data-i18n="mix_listen">Escuchar</a>
         </div>
       </section>
 
-      <section class="section section--wave reveal" id="events">
-        <div class="section__heading">
-          <span class="section__kicker">Recent &amp; Upcoming</span>
-          <h2>Highlighted Events</h2>
+      <section class="section container reveal" id="instagram">
+        <div class="section-head">
+          <p class="kicker" data-i18n="ig_kicker">Instagram</p>
+          <h2 data-i18n="ig_title">Contenido DJ</h2>
         </div>
-        <div class="events">
-          <article class="event reveal">
-            <span class="event__date">Jan 2025</span>
-            <h3>SOHO SELECTORS — Upcoming</h3>
-            <p>Soho House Barcelona, Spain · Curating an Afrohouse showcase for the members’ club crowd</p>
-          </article>
-          <article class="event reveal">
-            <span class="event__date">Aug 2024</span>
-            <h3>The Highlight Room</h3>
-            <p>Bowery Side, New York City, USA · Sunset-to-midnight rooftop takeover</p>
-          </article>
-          <article class="event reveal">
-            <span class="event__date">Oct 2024</span>
-            <h3>PANORÁMIC</h3>
-            <p>Barcelona, Spain · High-altitude set pairing deep Afrohouse with Catalan skyline views</p>
-          </article>
-          <article class="event reveal">
-            <span class="event__date">Nov–Dec 2024</span>
-            <h3>Private &amp; VIP Sessions</h3>
-            <p>MotoGP Barcelona suites · DE TULP Amsterdam · Bespoke performances for global partners</p>
-          </article>
-        </div>
-      </section>
-
-      <section class="section section--highlight reveal" id="gallery">
-        <div class="section__heading">
-          <span class="section__kicker">Visual Identity</span>
-          <h2>Creative Assets</h2>
-        </div>
-        <div class="gallery">
-          <figure class="gallery__item reveal">
-            <div class="gallery__image gallery__image--crowd" role="img" aria-label="LXBE performing at The Highlight Room in New York City"></div>
-            <figcaption>The Highlight Room NYC · Rooftop Session</figcaption>
-          </figure>
-          <figure class="gallery__item reveal">
-            <div class="gallery__image gallery__image--club" role="img" aria-label="LXBE performing an Afrohouse set at Soho House Barcelona"></div>
-            <figcaption>Soho House Barcelona · Selector Series</figcaption>
-          </figure>
-          <figure class="gallery__item reveal">
-            <div class="gallery__image gallery__image--portrait" role="img" aria-label="Studio portrait of LXBE with classic gold lighting"></div>
-            <figcaption>Press Portrait · LXBE Studio</figcaption>
-          </figure>
-        </div>
-        <div class="gallery__cta">
-          <a class="button button--primary" href="#" data-action="press-assets">
-            Request Press Assets
-          </a>
-          <span class="gallery__note">Includes hi-res images, logos, stage plot, and tech rider.</span>
-        </div>
-      </section>
-
-      <section class="section section--columns reveal" id="contact">
-        <div class="section__heading">
-          <span class="section__kicker">Bookings &amp; Media</span>
-          <h2>Contact</h2>
-        </div>
-        <div class="contact">
-          <div class="contact__details">
-            <h3>Booking Manager</h3>
-            <p>
-              <strong>Alex (LXBE)</strong><br>
-              <a href="mailto:hello.alexbemusic@gmail.com">hello.alexbemusic@gmail.com</a><br>
-              Barcelona · Spain
-            </p>
-            <h3>Press / Media</h3>
-            <p>
-              <a href="mailto:hello.alexbemusic@gmail.com">hello.alexbemusic@gmail.com</a><br>
-              <a href="https://instagram.com/alexbemusic" target="_blank" rel="noreferrer">@alexbemusic</a> ·
-              <a href="https://tr.ee/63Ct2nyrCb" target="_blank" rel="noreferrer">SoundCloud Mix</a> ·
-              <a href="https://linktr.ee/alexbemusic?utm_source=linktree_profile_share&amp;ltsid=fe0090f7-215e-4d7a-974f-dc3d6d646f4e" target="_blank" rel="noreferrer">Linktree</a>
-            </p>
-            <h3>Tech Essentials</h3>
-            <ul>
-              <li>Pioneer DJM-A9 mixer (or equivalent)</li>
-              <li>2 x CDJ-3000 (USB playback)</li>
-              <li>Monitor wedges with independent control</li>
-            </ul>
+        <div class="panel ig-panel">
+          <p data-i18n="ig_intro">
+            Seleccion de posts/reels de LXBE en cabina, directos y contenido de club.
+          </p>
+          <a
+            class="btn btn-ghost ig-profile-link"
+            href="https://www.instagram.com/alexbemusic/"
+            target="_blank"
+            rel="noreferrer"
+            data-i18n="ig_profile_cta"
+          >Ver perfil completo en Instagram</a>
+          <div class="ig-footprint-wrap">
+            <p class="ig-footprint-title" data-i18n="ig_footprint_title">International footprint</p>
+            <div class="ig-footprint" id="ig-footprint"></div>
           </div>
-          <form class="contact__form" action="https://formsubmit.co/hello.alexbemusic@gmail.com" method="POST">
+          <div class="ig-grid" id="ig-embeds"></div>
+        </div>
+      </section>
+
+      <section class="section container reveal" id="contacto">
+        <div class="section-head">
+          <p class="kicker" data-i18n="contact_kicker">Bookings & Media</p>
+          <h2 data-i18n="contact_title">Contacto</h2>
+        </div>
+
+        <div class="contact-wrap panel">
+          <div>
+            <h3 data-i18n="contact_mgmt">Management</h3>
+            <p><strong>LXBE / Alex</strong></p>
+            <p><a href="mailto:hello.alexbemusic@gmail.com">hello.alexbemusic@gmail.com</a></p>
+            <p data-i18n="contact_location">Barcelona, España</p>
+
+            <h3 data-i18n="contact_links">Enlaces</h3>
+            <div class="social-links" aria-label="Social links">
+              <a
+                class="social-icon"
+                href="https://instagram.com/alexbemusic"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Instagram"
+                title="Instagram"
+              >
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M7.5 2h9A5.5 5.5 0 0 1 22 7.5v9a5.5 5.5 0 0 1-5.5 5.5h-9A5.5 5.5 0 0 1 2 16.5v-9A5.5 5.5 0 0 1 7.5 2Zm0 1.8A3.7 3.7 0 0 0 3.8 7.5v9a3.7 3.7 0 0 0 3.7 3.7h9a3.7 3.7 0 0 0 3.7-3.7v-9a3.7 3.7 0 0 0-3.7-3.7h-9Zm9.4 1.4a1.1 1.1 0 1 1 0 2.2 1.1 1.1 0 0 1 0-2.2ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 1.8a3.2 3.2 0 1 0 0 6.4 3.2 3.2 0 0 0 0-6.4Z"/>
+                </svg>
+              </a>
+              <a
+                class="social-icon"
+                href="https://soundcloud.com/alexbemusic"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="SoundCloud"
+                title="SoundCloud"
+              >
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M9.7 9.2a4.5 4.5 0 0 1 8.2 2.5 3.4 3.4 0 1 1 .6 6.8H9.7a.9.9 0 0 1-.9-.9V10a.9.9 0 0 1 .9-.8Zm-3.4 2.1c.5 0 .9.4.9.9v5.4a.9.9 0 1 1-1.8 0v-5.4c0-.5.4-.9.9-.9Zm-2.6.9c.5 0 .9.4.9.9v4.5a.9.9 0 1 1-1.8 0V13c0-.5.4-.9.9-.9Zm-2.6 1.5c.5 0 .9.4.9.9v3a.9.9 0 1 1-1.8 0v-3c0-.5.4-.9.9-.9Z"/>
+                </svg>
+              </a>
+            </div>
+
+           
+          </div>
+
+          <form
+            class="contact-form"
+            id="contact-form"
+            action="https://formsubmit.co/hello.alexbemusic@gmail.com"
+            method="POST"
+          >
             <label>
-              Name
-              <input type="text" name="name" required>
+              <span data-i18n="form_name">Nombre</span>
+              <input type="text" name="name" required />
             </label>
             <label>
-              Email
-              <input type="email" name="email" required>
+              <span data-i18n="form_email">Email</span>
+              <input type="email" name="email" required />
             </label>
             <label>
-              Organization
-              <input type="text" name="organization">
+              <span data-i18n="form_org">Empresa / Promotora</span>
+              <input type="text" name="organization" />
             </label>
             <label>
-              Message
-              <textarea name="message" rows="4" placeholder="Share event details or interview requests"></textarea>
+              <span data-i18n="form_message">Mensaje</span>
+              <textarea
+                name="message"
+                rows="4"
+                required
+                data-i18n-attr="placeholder:form_message_placeholder"
+              ></textarea>
             </label>
-            <button class="button button--primary" type="submit">Submit Request</button>
-            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_subject" value="LXBE Booking Request" />
+            <input type="hidden" name="_cc" value="maxim@hipeagency.es" />
+            <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" />
+            <label class="form-consent">
+              <input type="checkbox" name="privacy_consent" required />
+              <span data-i18n="form_privacy_consent">
+                He leído y acepto la política de privacidad.
+              </span>
+            </label>
+            <button class="btn btn-primary" type="submit" data-i18n="form_submit">Enviar solicitud</button>
           </form>
+        </div>
+      </section>
+
+      <section class="section container reveal legal-section" id="legal">
+        <div class="section-head">
+          <p class="kicker" data-i18n="legal_kicker">Legal</p>
+          <h2 data-i18n="legal_title">Privacidad y cookies</h2>
+        </div>
+        <div class="legal-grid">
+          <details class="legal-card" id="privacy-policy" open>
+            <summary data-i18n="privacy_title">Política de privacidad</summary>
+            <p data-i18n="privacy_text_1">
+              Titular del sitio: persona física (LXBE/Alex). Finalidad: gestionar solicitudes de booking y contacto.
+            </p>
+            <p data-i18n="privacy_text_2">
+              Datos tratados: nombre, email, empresa/promotora y mensaje. Base jurídica: consentimiento del usuario.
+            </p>
+            <p data-i18n="privacy_text_3">
+              Destinatarios: FormSubmit para el envío del formulario y proveedores de hosting. Puedes ejercer derechos de acceso, rectificación o supresión por email.
+            </p>
+          </details>
+          <details class="legal-card" id="cookies-policy">
+            <summary data-i18n="cookies_title">Política de cookies</summary>
+            <p data-i18n="cookies_text_1">
+              Esta web utiliza cookies técnicas necesarias y, solo con consentimiento, contenido embebido de terceros (Instagram/SoundCloud) que puede instalar cookies adicionales.
+            </p>
+            <p data-i18n="cookies_text_2">
+              Puedes aceptar o rechazar cookies no necesarias desde el banner y cambiar tu elección cuando quieras.
+            </p>
+            <button class="btn btn-ghost cookie-manage" type="button" data-action="cookie-manage" data-i18n="cookie_manage">
+              Gestionar cookies
+            </button>
+          </details>
+          <details class="legal-card" id="legal-notice">
+            <summary data-i18n="notice_title">Aviso legal</summary>
+            <p data-i18n="notice_text_1">
+              Sitio informativo y de promoción artística de un titular particular. El uso de este sitio implica aceptación de estas condiciones y de la normativa aplicable.
+            </p>
+            <p data-i18n="notice_text_2">
+              Contacto legal y privacidad: hello.alexbemusic@gmail.com.
+            </p>
+          </details>
         </div>
       </section>
     </main>
 
-    <footer class="footer">
-      <p>LXBE · Afrohouse Architect · © <span id="year"></span></p>
-      <div class="footer__links">
-        <a href="#top">Back to top</a>
-        <a href="#" data-action="onesheet">Request One-sheet</a>
+    <footer class="footer container">
+      <p id="footer-copy"></p>
+      <div class="footer-links">
+        <a href="#privacy-policy" data-i18n="footer_privacy">Privacidad</a>
+        <a href="#cookies-policy" data-i18n="footer_cookies">Cookies</a>
+        <a href="#legal-notice" data-i18n="footer_notice">Aviso legal</a>
+        <a href="#top" data-i18n="footer_top">Volver arriba</a>
       </div>
     </footer>
+
+    <div class="cookie-banner" id="cookie-banner" role="dialog" aria-live="polite" aria-label="Cookie banner">
+      <p data-i18n="cookie_banner_text">
+        Usamos cookies técnicas y, con tu permiso, cargamos embeds de terceros (Instagram/SoundCloud).
+      </p>
+      <div class="cookie-actions">
+        <button class="btn btn-primary" type="button" data-action="cookie-accept" data-i18n="cookie_accept">Aceptar</button>
+        <button class="btn btn-ghost" type="button" data-action="cookie-reject" data-i18n="cookie_reject">Rechazar</button>
+      </div>
+    </div>
+
+    <button
+      class="back-to-top"
+      id="back-to-top"
+      type="button"
+      data-i18n-attr="aria-label:footer_top|title:footer_top"
+      aria-label="Volver arriba"
+      title="Volver arriba"
+    >
+      ↑
+    </button>
+
+    <button
+      class="cookie-fab"
+      id="cookie-fab"
+      type="button"
+      data-action="cookie-manage"
+      data-i18n-attr="aria-label:cookie_manage|title:cookie_manage"
+      aria-label="Gestionar cookies"
+      title="Gestionar cookies"
+    >
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M12 2a10 10 0 1 0 10 10c0-.4-.3-.8-.7-.9a3.2 3.2 0 0 1-2.6-3.1 3 3 0 0 1 .4-1.6.9.9 0 0 0-1-1.3 3.2 3.2 0 0 1-3.5-2 .9.9 0 0 0-1.3-.5A10 10 0 0 0 12 2Zm-4.4 7.1a1.2 1.2 0 1 1 0 2.4 1.2 1.2 0 0 1 0-2.4Zm7.7-.4a1 1 0 1 1 0 2.1 1 1 0 0 1 0-2.1Zm-6 5.4a1.4 1.4 0 1 1 0 2.8 1.4 1.4 0 0 1 0-2.8Zm6 .8a1.1 1.1 0 1 1 0 2.2 1.1 1.1 0 0 1 0-2.2Z"/>
+      </svg>
+    </button>
 
     <script src="script.js" defer></script>
   </body>
