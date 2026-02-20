@@ -632,6 +632,8 @@ const initOneSheetDownload = () => {
   trigger.addEventListener('click', () => {
     const dict = translations[currentLang] || translations.en;
     const photoUrl = new URL('photo.jpg', window.location.href).href;
+    const logoWhite = new URL('LXBE%20WHITE.png', window.location.href).href;
+    const logoBlack = new URL('LXBE%20BLACK.png', window.location.href).href;
     const instagramCards = INSTAGRAM_POSTS.slice(0, 6)
       .map((post) => {
         const locationText = post.location[currentLang] || post.location.en;
@@ -657,7 +659,14 @@ const initOneSheetDownload = () => {
     body{margin:0;font-family:Arial,sans-serif;background:#f6f2e9;color:#16141d}
     .sheet{max-width:900px;margin:0 auto;padding:36px}
     .hero{padding:28px;border-radius:20px;background:linear-gradient(135deg,#1f3a8a,#ff6b35);color:#fff}
-    h1{margin:0 0 8px;font-size:44px;letter-spacing:1px}
+    h1{margin:0}
+    .logo-wrap{height:58px;display:flex;align-items:center}
+    .logo-img{height:58px;display:block}
+    .logo-dark{display:none}
+    @media print{
+      .logo-light{display:none}
+      .logo-dark{display:block}
+    }
     h2{margin:24px 0 10px;font-size:20px;color:#1f3a8a}
     p{line-height:1.55}
     .grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
@@ -676,7 +685,10 @@ const initOneSheetDownload = () => {
 <body>
   <div class="sheet">
     <section class="hero">
-      <h1>LXBE</h1>
+      <h1 class="logo-wrap">
+        <img class="logo-img logo-light" src="${logoWhite}" alt="LXBE logo" />
+        <img class="logo-img logo-dark" src="${logoBlack}" alt="LXBE logo" />
+      </h1>
       <p>${dict.onesheet_subtitle} · Afro House · House · Funky House · Nu Disco</p>
     </section>
     <section>
