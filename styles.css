@@ -117,9 +117,15 @@ p {
 
 .brand {
   text-decoration: none;
-  font-family: var(--font-title);
-  font-weight: 800;
-  letter-spacing: 0.08em;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.brand img {
+  height: 50px;
+  width: auto;
+  display: block;
 }
 
 .nav-right {
@@ -688,6 +694,85 @@ textarea {
   gap: 0.8rem;
 }
 
+.legal-drawer {
+  position: fixed;
+  inset: 0;
+  z-index: 80;
+}
+
+.legal-drawer[hidden] {
+  display: none;
+}
+
+.legal-drawer__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(21, 19, 26, 0.45);
+  backdrop-filter: blur(4px);
+}
+
+.legal-drawer__panel {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: min(620px, 92vw);
+  background: rgba(255, 255, 255, 0.94);
+  border-left: 1px solid var(--line);
+  box-shadow: -18px 0 50px rgba(0, 0, 0, 0.12);
+  padding: 1.3rem 1.4rem 1.6rem;
+  display: grid;
+  grid-template-rows: auto auto 1fr;
+  gap: 1rem;
+}
+
+.legal-drawer__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.legal-drawer__close {
+  border: 1px solid var(--line);
+  background: #fff;
+  border-radius: 10px;
+  width: 36px;
+  height: 36px;
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+
+.legal-tabs {
+  display: inline-flex;
+  gap: 0.45rem;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 0.22rem;
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.legal-tab {
+  border: 0;
+  background: transparent;
+  padding: 0.55rem 0.8rem;
+  border-radius: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 700;
+  color: var(--muted);
+  cursor: pointer;
+}
+
+.legal-tab.is-active {
+  background: var(--brand-3);
+  color: #fff;
+}
+
+.legal-contents {
+  overflow-y: auto;
+  padding-right: 0.35rem;
+}
+
 .legal-section {
   padding-top: 2.2rem;
 }
@@ -702,13 +787,6 @@ textarea {
   background: rgba(255, 255, 255, 0.75);
   border-radius: 14px;
   padding: 0.9rem 1rem;
-}
-
-.legal-card summary {
-  cursor: pointer;
-  font-weight: 700;
-  color: var(--brand-3);
-  margin-bottom: 0.55rem;
 }
 
 .cookie-banner {

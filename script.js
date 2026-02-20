@@ -12,7 +12,7 @@ const translations = {
     nav_instagram: 'Instagram',
     nav_contact: 'Contacto',
     hero_kicker: 'Afro House · House · Funky House · Nu Disco',
-    hero_title: 'PRESSKIT LXBE',
+    hero_title: 'PRESSKIT',
     hero_text:
       'DJ de Barcelona con sets energicos y emocionales. LXBE mezcla percusion afro, grooves house y momentos vocales para crear pistas de baile con identidad.',
     hero_cta_listen: 'Escuchar mixes',
@@ -117,7 +117,7 @@ const translations = {
     nav_instagram: 'Instagram',
     nav_contact: 'Contact',
     hero_kicker: 'Afro House · House · Funky House · Nu Disco',
-    hero_title: 'LXBE PRESSKIT',
+    hero_title: ' PRESSKIT',
     hero_text:
       'Barcelona DJ delivering energetic and emotional sets. LXBE blends afro percussion, house grooves and vocal moments to shape dancefloors with identity.',
     hero_cta_listen: 'Listen to mixes',
@@ -380,6 +380,67 @@ const initNavigation = () => {
   document.addEventListener('click', (event) => {
     if (!menu.contains(event.target) && !toggle.contains(event.target)) {
       closeMenu();
+    }
+  });
+};
+
+const activateLegalSection = (targetId = 'privacy-policy') => {
+  const tabs = document.querySelectorAll('.legal-tab');
+  const contents = document.querySelectorAll('[data-legal-content]');
+
+  tabs.forEach((tab) => {
+    const isActive = tab.dataset.legalTarget === targetId;
+    tab.classList.toggle('is-active', isActive);
+    tab.setAttribute('aria-selected', String(isActive));
+  });
+
+  contents.forEach((section) => {
+    const shouldShow = section.id === targetId;
+    section.hidden = !shouldShow;
+  });
+};
+
+const initLegalDrawer = () => {
+  const drawer = document.getElementById('legal-drawer');
+  if (!drawer) return;
+
+  const overlay = drawer.querySelector('.legal-drawer__overlay');
+  const closeButtons = drawer.querySelectorAll('[data-action="close-legal"]');
+
+  const openDrawer = (targetId) => {
+    activateLegalSection(targetId);
+    drawer.hidden = false;
+    drawer.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  };
+
+  const closeDrawer = () => {
+    drawer.hidden = true;
+    drawer.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  };
+
+  document.querySelectorAll('[data-legal-link]').forEach((link) => {
+    link.addEventListener('click', (event) => {
+      event.preventDefault();
+      const targetId = link.dataset.legalTarget || 'privacy-policy';
+      openDrawer(targetId);
+    });
+  });
+
+  drawer.querySelectorAll('.legal-tab').forEach((tab) => {
+    tab.addEventListener('click', () => {
+      const targetId = tab.dataset.legalTarget;
+      activateLegalSection(targetId);
+    });
+  });
+
+  closeButtons.forEach((btn) => btn.addEventListener('click', closeDrawer));
+  if (overlay) overlay.addEventListener('click', closeDrawer);
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && !drawer.hidden) {
+      closeDrawer();
     }
   });
 };
@@ -679,6 +740,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initCookieConsent();
   initLanguage();
   initNavigation();
+  initLegalDrawer();
   initReveal();
   initPressAction();
   initBackToTop();

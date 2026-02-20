@@ -14,7 +14,22 @@
       content="Bio, sonido, mixes, fechas y contacto para bookings de LXBE."
     />
     <meta property="og:type" content="website" />
+    <meta property="og:image" content="og-cover.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="LXBE Presskit | DJ Afro House" />
+    <meta
+      name="twitter:description"
+      content="Bio, sonido, mixes, fechas y contacto para bookings de LXBE."
+    />
+    <meta name="twitter:image" content="og-cover.jpg" />
+    <link rel="image_src" href="og-cover.jpg" />
     <meta name="theme-color" content="#f5f1e8" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="favicon.png" />
+    <link rel="apple-touch-icon" href="favicon.png" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -31,7 +46,9 @@
 
     <header class="site-header" id="top">
       <nav class="nav container" data-i18n-attr="aria-label:nav_aria">
-        <a class="brand" href="#top">LXBE</a>
+        <a class="brand" href="#top" aria-label="LXBE home">
+          <img src="LXBE BLACK.png" alt="LXBE logo" />
+        </a>
 
         <button
           class="nav-toggle"
@@ -62,7 +79,7 @@
       <section class="hero container reveal">
         <div class="hero-copy">
           <p class="kicker" data-i18n="hero_kicker">Afro House · House · Funky House · Nu Disco</p>
-          <h1 data-i18n="hero_title">PRESSKIT LXBE</h1>
+          <h1 data-i18n="hero_title">PRESSKIT </h1>
           <p data-i18n="hero_text">
             DJ de Barcelona con sets enérgicos y emocionales. LXBE mezcla percusión afro,
             grooves house y momentos vocales para crear pistas de baile con identidad.
@@ -275,14 +292,40 @@
         </div>
       </section>
 
-      <section class="section container reveal legal-section" id="legal">
-        <div class="section-head">
-          <p class="kicker" data-i18n="legal_kicker">Legal</p>
-          <h2 data-i18n="legal_title">Privacidad y cookies</h2>
+    </main>
+
+    <footer class="footer container">
+      <p id="footer-copy"></p>
+      <div class="footer-links">
+        <a href="#privacy-policy" data-legal-link data-legal-target="privacy-policy" data-i18n="footer_privacy">Privacidad</a>
+        <a href="#cookies-policy" data-legal-link data-legal-target="cookies-policy" data-i18n="footer_cookies">Cookies</a>
+        <a href="#legal-notice" data-legal-link data-legal-target="legal-notice" data-i18n="footer_notice">Aviso legal</a>
+        <a href="#top" data-i18n="footer_top">Volver arriba</a>
+      </div>
+    </footer>
+
+    <section class="legal-drawer" id="legal-drawer" hidden aria-hidden="true">
+      <div class="legal-drawer__overlay" data-action="close-legal" aria-hidden="true"></div>
+      <div class="legal-drawer__panel" role="dialog" aria-modal="true" aria-labelledby="legal-drawer-title">
+        <header class="legal-drawer__header">
+          <div>
+            <p class="kicker" data-i18n="legal_kicker">Legal</p>
+            <h2 id="legal-drawer-title" data-i18n="legal_title">Privacidad y cookies</h2>
+          </div>
+          <button class="legal-drawer__close" type="button" data-action="close-legal" aria-label="Cerrar legal">
+            ×
+          </button>
+        </header>
+
+        <div class="legal-tabs" role="tablist" aria-label="Legal">
+          <button id="privacy-policy-tab" class="legal-tab is-active" type="button" role="tab" aria-selected="true" aria-controls="privacy-policy" data-legal-target="privacy-policy" data-i18n="footer_privacy">Privacidad</button>
+          <button id="cookies-policy-tab" class="legal-tab" type="button" role="tab" aria-selected="false" aria-controls="cookies-policy" data-legal-target="cookies-policy" data-i18n="footer_cookies">Cookies</button>
+          <button id="legal-notice-tab" class="legal-tab" type="button" role="tab" aria-selected="false" aria-controls="legal-notice" data-legal-target="legal-notice" data-i18n="footer_notice">Aviso legal</button>
         </div>
-        <div class="legal-grid">
-          <details class="legal-card" id="privacy-policy" open>
-            <summary data-i18n="privacy_title">Política de privacidad</summary>
+
+        <div class="legal-contents">
+          <article class="legal-card" id="privacy-policy" data-legal-content role="tabpanel" aria-labelledby="privacy-policy-tab">
+            <h3 data-i18n="privacy_title">Política de privacidad</h3>
             <p data-i18n="privacy_text_1">
               Titular del sitio: persona física (LXBE/Alex). Finalidad: gestionar solicitudes de booking y contacto.
             </p>
@@ -292,9 +335,10 @@
             <p data-i18n="privacy_text_3">
               Destinatarios: FormSubmit para el envío del formulario y proveedores de hosting. Puedes ejercer derechos de acceso, rectificación o supresión por email.
             </p>
-          </details>
-          <details class="legal-card" id="cookies-policy">
-            <summary data-i18n="cookies_title">Política de cookies</summary>
+          </article>
+
+          <article class="legal-card" id="cookies-policy" data-legal-content role="tabpanel" aria-labelledby="cookies-policy-tab" hidden>
+            <h3 data-i18n="cookies_title">Política de cookies</h3>
             <p data-i18n="cookies_text_1">
               Esta web utiliza cookies técnicas necesarias y, solo con consentimiento, contenido embebido de terceros (Instagram/SoundCloud) que puede instalar cookies adicionales.
             </p>
@@ -304,29 +348,20 @@
             <button class="btn btn-ghost cookie-manage" type="button" data-action="cookie-manage" data-i18n="cookie_manage">
               Gestionar cookies
             </button>
-          </details>
-          <details class="legal-card" id="legal-notice">
-            <summary data-i18n="notice_title">Aviso legal</summary>
+          </article>
+
+          <article class="legal-card" id="legal-notice" data-legal-content role="tabpanel" aria-labelledby="legal-notice-tab" hidden>
+            <h3 data-i18n="notice_title">Aviso legal</h3>
             <p data-i18n="notice_text_1">
               Sitio informativo y de promoción artística de un titular particular. El uso de este sitio implica aceptación de estas condiciones y de la normativa aplicable.
             </p>
             <p data-i18n="notice_text_2">
               Contacto legal y privacidad: hello.alexbemusic@gmail.com.
             </p>
-          </details>
+          </article>
         </div>
-      </section>
-    </main>
-
-    <footer class="footer container">
-      <p id="footer-copy"></p>
-      <div class="footer-links">
-        <a href="#privacy-policy" data-i18n="footer_privacy">Privacidad</a>
-        <a href="#cookies-policy" data-i18n="footer_cookies">Cookies</a>
-        <a href="#legal-notice" data-i18n="footer_notice">Aviso legal</a>
-        <a href="#top" data-i18n="footer_top">Volver arriba</a>
       </div>
-    </footer>
+    </section>
 
     <div class="cookie-banner" id="cookie-banner" role="dialog" aria-live="polite" aria-label="Cookie banner">
       <p data-i18n="cookie_banner_text">
